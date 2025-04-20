@@ -25,7 +25,7 @@ export async function checkAndSnipeVanity(bot, config) {
 
         try {
           await axios.patch(
-            `https://discord.com/api/v10/guilds/${config.guildId}/codejs-url`,
+            `https://discord.com/api/v10/guilds/${config.guildId}/vanity-url`,
             { code: desired },
             { headers }
           );
