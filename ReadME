@@ -1,0 +1,3 @@
+config.json içindeki interval kısmı urlyi kaç saniyede bir deneyeceği kısımdır 4-5 saniyede tutmak idealdir çok hızlı yaparsanız banlanabilirsiniz
+
+Bu sistem şansa dayalıdır siz botu açık tutarsın urlnin olduğu sunucuda boost bitince bot hemen almayı dener.
