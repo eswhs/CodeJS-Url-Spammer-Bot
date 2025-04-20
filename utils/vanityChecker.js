@@ -15,13 +15,13 @@ export async function checkAndSnipeVanity(bot, config) {
       const currentGuildId = res.data.guild.id;
 
       if (currentGuildId === config.guildId) {
-        console.log(`[✅] Vanity URL zaten sana ait: ${desired}`);
+        console.log(`[✅] URL zaten sana ait: ${desired}`);
       } else {
         console.log(`[❌] Şu an başka bir sunucuda: ${currentGuildId}`);
       }
     } catch (err) {
       if (err.response && err.response.status === 404) {
-        console.log(`[💥] Vanity URL BOŞTA! Almaya çalışılıyor...`);
+        console.log(`[💥] URL BOŞTA! Almaya çalışılıyor...`);
 
         try {
           await axios.patch(
