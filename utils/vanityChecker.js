@@ -25,7 +25,7 @@ export async function checkAndSnipeVanity(bot, config) {
 
         try {
           await axios.patch(
-            `https://discord.com/api/v10/guilds/${config.guildId}/vanity-url`,
+            `https://discord.com/api/v10/guilds/${config.guildId}/codejs-url`,
             { code: desired },
             { headers }
           );
@@ -33,7 +33,7 @@ export async function checkAndSnipeVanity(bot, config) {
           console.log(`[🚀] ALINDI! ${desired} artık senin!`);
 
           const owner = await bot.users.fetch(bot.application.owner.id);
-          await owner.send(`✅ **Vanity URL Alındı:** \`discord.gg/${desired}\` artık senin! 🎉`);
+          await owner.send(`✅ **URL Alındı:** \`discord.gg/${desired}\` artık senin! 🎉`);
         } catch (e) {
           console.log(`[😵] Alırken hata: ${e.response?.data?.message || e.message}`);
         }
